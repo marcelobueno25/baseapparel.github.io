@@ -52,7 +52,14 @@
 .content_left .content_detail_form {
     position: relative;
     width: 100%;
+}
+
+.content_left #content_detail_result {
+    font-weight: normal;
+    color: hsl(0, 93%, 68%);
     margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: 25px;
 }
 
 .content_left .content_detail_form input {
