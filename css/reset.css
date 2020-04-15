@@ -1,10 +1,10 @@
 @font-face {
     font-family: Josefin Sans;
-    src: url('../font/JosefinSans-VariableFont_wght.ttf');
+    src: url('../font/JosefinSans-VariableFont_wght.ttf')  format('truetype');
 }
 
 * {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif;
     border: 0;
     box-sizing: border-box;
     margin: 0;

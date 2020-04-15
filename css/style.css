@@ -1,66 +1,61 @@
 .content {
     display: flex;
-    flex-direction: row;
     position: relative;
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
 }
 
-.content_logo {
-    position: absolute;
-    padding: 2em 5em;
-}
-
-.content_detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.content_left {
     background-image: url('../images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 6em 5em;
-    height: 100%;
     width: 60%;
+    display: flex;
+    justify-content: center;
 }
 
-.content_detail p{
-    color: hsl(0, 36%, 70%);
+.content_left .content_left_detail {
+    max-width: 450px;
+    width: 100%;
 }
 
-.content_detail .content_detail_title {
+.content_left .content_left_logo {
+    padding: 20px 0;
+}
+
+.content_left .content_left_photo {
+    display: none;
+}
+
+.content_left .content_detail_title {
     font-size: 50px;
+    font-weight: bold;
     color: hsl(0, 6%, 24%);
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-weight: 600;
     margin-top: 90px;
 }
 
-.content_detail .content_detail_title span{
+.content_left .content_detail_title span {
     font-size: 50px;
     font-weight: normal;
     color: hsl(0, 36%, 70%);
     font-weight: 100;
 }
 
-.content_detail .content_detail_paragraph {
+.content_left .content_detail_paragraph {
+    color: hsl(0, 36%, 70%);
     line-height: 25px;
     margin: 20px 0;
 }
 
-.content_detail .content_detail_paragraph, .content_detail .content_detail_title {
-    max-width: 430px;
-}
-
-.content_detail .content_detail_form {
+.content_left .content_detail_form {
     position: relative;
-    max-width: 430px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
-.content_detail .content_detail_form input{
+.content_left .content_detail_form input {
     background-color: transparent;
     border: 1px solid hsl(0, 80%, 86%);
     padding: 20px 25px;
@@ -68,12 +63,12 @@
     width: 100%;
 }
 
-.content_detail .content_detail_form input::placeholder{
+.content_left .content_detail_form input::placeholder {
     color: hsl(0, 80%, 86%);
     font-size: 15px;
 }
 
-.content_detail .content_detail_form button {
+.content_left .content_detail_form button {
     position: absolute;
     right: 0;
     background: linear-gradient(136deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -83,65 +78,43 @@
     height: 100%;
 }
 
-.content_photo {
+.content_right_photo {
     background-image: url('../images/hero-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 100%;
     width: 40%;
 }
 
-@media only screen and (max-width: 1000px) {
-    .content_detail .content_detail_title {
-        font-size: 3em;
-    }
-    
-    .content_detail .content_detail_title span{
-        font-size: 0.8em;
-    }
-}
 
 @media only screen and (max-width: 800px) {
-    .content {
-        height: 100%;
-        flex-wrap: wrap;
-    }
-
-    .content_detail {
-        justify-content: end;
+    .content_left {
         width: 100%;
-        padding: 1em 5em;
-        order: 2;
     }
 
-    .content_detail .content_detail_title {
-        font-size: 2.5em;
+    .content_left .content_left_detail {
+        max-width: 100%;
+    }
+
+    .content_left .content_left_logo {
+        padding: 20px;
+    }
+
+    .content_left .content_left_detail_align {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .content_left .content_left_photo {
+        display: block;
+        width: 100%;
+    }
+
+    .content_left .content_detail_title {
         text-align: center;
     }
     
-    .content_detail .content_detail_title span{
-        font-size: 0.8em;
+    .content_right_photo {
+        display: none;
     }
-
-    .content_detail .content_detail_paragraph {
-        text-align: center;
-    }
-
-    .content_photo {
-        background-image: url(../images/hero-mobile.jpg);
-        background-size: cover;
-        height: 300px;
-        margin-top: 6em;
-        width: 100%;
-        order: 1;
-    }
-
-    /* .content_logo {
-        position: absolute;
-        top: 0;
-        background-color: #fff;
-        width: 100%;
-        padding: 10px;
-    } */
 }
