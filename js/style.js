@@ -9,11 +9,13 @@ button.addEventListener('click', function(event) {
     event.preventDefault();
     var result = document.getElementById('content_detail_result');
     var email = document.getElementById('content_detail_input').value;
-
+    var form = document.querySelector('.content_detail_form');
+    
     if(validateEmail(email)){
-        console.log("Email Correto");
+        form.classList.remove('invalid');
         result.innerText = "";
     } else {
+        form.classList.add('invalid');
         result.innerText = "Please provide a valid email";
     }
 });
